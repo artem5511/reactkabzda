@@ -1,17 +1,23 @@
 import React from 'react';
 
-export function Accordion(props: any) {
+type AccordionPropsType = {
+    titleValue: string
+}
+export function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendered")
     return <>
-        <AccordionMenu title={props.title}/>
+        <AccordionMenu title={props.titleValue}/>
         <AccordionBody/>
     </>
 }
 
-function AccordionMenu(props: any) {
+type AccordionMenuPropsType = {
+    title: string
+}
+function AccordionMenu(props: AccordionMenuPropsType) {
     console.log("AccordionMenu rendered")
     return (
-        <h3>{props.title}</h3>
+        <h3>---{props.title}---</h3>
     )
 }
 
