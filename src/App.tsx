@@ -26,6 +26,7 @@ function App() {
 
 type PageTitlePropsType = {
     title: string
+
 }
 function PageTitle(props:PageTitlePropsType) {
     console.log("AppTitle rendered")
